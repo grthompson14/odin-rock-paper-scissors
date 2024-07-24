@@ -3,10 +3,25 @@
     <head>
         <title>Odin Rock Paper Scissors Project</title>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <script>
-            console.log("Hello World");
+            function  getComputerChoice() {
+                let  ComputerChoice = ["Rock", "Paper", "Scissors"] //lets computer choose rock paper or scissors
+                let randomizeChoice = Math.floor(Math.random() * ComputerChoice.length) + 1 //randomizes  computers  choices
+                
+                if (randomizeChoice === 1) {
+                    return "Rock";
+                }
+                if (randomizeChoice === 2) {
+                    return "Paper";
+                }
+                if  (randomizeChoice === 3) {
+                    return "Scissors";
+                }
+            }
+            console.log(getComputerChoice()); //shows  computer's  pick  in  console
         </script>
     </body>
 </html>
